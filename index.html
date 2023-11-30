@@ -95,6 +95,7 @@
       <h1 class="site-title">Sichen</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
+      <p class="site-subtitle" itemprop="description">两个黄鹂鸣翠柳，一行白鹭上青天。</p>
   </div>
 
   <div class="site-nav-right">
@@ -160,7 +161,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/30/test/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2016/01/12/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -174,7 +175,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/11/30/test/" class="post-title-link" itemprop="url">test</a>
+            <a href="/2016/01/12/test/" class="post-title-link" itemprop="url">NS_DESIGNATED_INITIALIZER宏的使用</a>
         </h2>
 
         <div class="post-meta">
@@ -184,7 +185,23 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2023-11-30 15:25:19" itemprop="dateCreated datePublished" datetime="2023-11-30T15:25:19+08:00">2023-11-30</time>
+              <time title="创建时间：2016-01-12 14:50:38" itemprop="dateCreated datePublished" datetime="2016-01-12T14:50:38+08:00">2016-01-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-11-30 18:50:23" itemprop="dateModified" datetime="2023-11-30T18:50:23+08:00">2023-11-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">开发</span></a>
+                </span>
             </span>
 
           
@@ -198,76 +215,28 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/30/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="王斯晨">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sichen">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/11/30/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-11-30 14:07:45" itemprop="dateCreated datePublished" datetime="2023-11-30T14:07:45+08:00">2023-11-30</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
+          <p>NS_DESIGNATED_INITIALIZER 指定构造器宏，使用如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (instancetype)initWithCoder:(NSCoder *)aDecoder NS_DESIGNATED_INITIALIZER;</span><br></pre></td></tr></table></figure>
+<p>虽然在实际开发中并不多见，但它在Objective-C里是很重要的概念。</p>
+<h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p>The designated initializer guarantees the object is fully initialised by sending an initialization message to the superclass. The implementation detail becomes important to a user of the class when they subclass it. The rules for designated initializers in detail:</p>
+<ul>
+<li>A designated initializer must call (via super) a designated initializer of the superclass. Where NSObject is the superclass this is just [super init].</li>
+<li>Any convenience initializer must call another initializer in the class - which eventually leads to a designated initializer.</li>
+<li>A class with designated initializers must implement all of the designated initializers of the superclass.</li>
+</ul>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><p>如果你的类是</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@interface MyClass : NSObject</span><br><span class="line">@property(copy, nonatomic) NSString *name;</span><br><span class="line">- (instancetype)initWithName:(NSString *)name NS_DESIGNATED_INITIALIZER;</span><br><span class="line">- (instancetype)init;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>编译器就会检测你指定的构造器方法initWithName:（如果你像下面这么写，则会报warning）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (instancetype)init &#123;</span><br><span class="line">    <span class="keyword">if</span> (self = [super init]) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> self;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>正确的写法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (instancetype)init &#123;</span><br><span class="line">    <span class="built_in">return</span> [self initWithName:@<span class="string">&quot;&quot;</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h3><p>通常来说，我们在构造类时，应尽量指定个数少的指定构造器，而让其他构造器方法都调self的某个指定构造器。这么做为了遵循这样一个原则，所有对象的实例化过程，最终都只会走向它自身的指定构造器方法，它自身的指定构造器方法，则再通过调父类的指定构造器方法。这样就在逻辑上走向了统一，避免了在构造器方法非常多以及继承关系复杂的环境下潜在的Bug隐患。</p>
+<p>而NS_DESIGNATED_INITIALIZER宏正是编译器为我们做的对代码的静态检测，如果你没有遵循该原则，则会报警告。通常在日常开发中我们往往会忽视它的重要性，这不是一个好习惯，毕竟写一个宏是非常方便的。保证良好的编写Designated Initializer的风格，可以让我们节约很多时间。</p>
+<h3 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h3><p>这是一个自定义控件，通过指定了新的指定构造器方法来实例化对象。<br><a target="_blank" rel="noopener" href="https://github.com/sichenhz/SCTimerView">Demo</a></p>
 
       
     </div>
@@ -349,9 +318,17 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
       </div>
   </nav>
 </div>
